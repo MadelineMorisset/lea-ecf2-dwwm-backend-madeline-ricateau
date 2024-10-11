@@ -42,6 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <main>
         <nav>
+            <!-- Pseudo fil d'ariane -->
             <ul>
                 <li><a href="./backoffice.php">BACKOFFICE</a> / </li>
                 <li><a href="./create_link.php">Ajouter</a></li>
