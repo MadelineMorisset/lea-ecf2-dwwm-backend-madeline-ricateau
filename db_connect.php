@@ -1,6 +1,6 @@
 <?php
 try {
-    $db_connect = new PDO("mysql:host=localhost;dbname:share_my_links", 
+    $db_connect = new PDO("mysql:host=localhost;dbname=share_my_links", 
                           "root", 
                           "V3nDta!");
                           
@@ -8,5 +8,5 @@ try {
 
     // echo "Connexion réussie ! ";  
 } catch (PDOException $e) {
-    echo "Connexion échouée : " . $e->getMessage();    
+    echo ("Connexion échouée : " . $e->getMessage());    
 }
