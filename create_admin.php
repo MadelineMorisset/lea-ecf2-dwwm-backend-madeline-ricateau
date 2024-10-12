@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                  VALUES(?, ?)");
     $ajout_admin_requete->bind_param("ss", $admin_login, $admin_password);
 
-    if ($ajout_admin_requete) {
+    if ($ajout_admin_requete->execute()) {
         $ajout_admin_execution_message = "<p>Admin ajouté avec succès !</p>";
     } else {
         $ajout_admin_execution_message = "<p>Erreur lors de l'ajout de l'Admin ...</p>";
