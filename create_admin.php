@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $ajout_admin_requete = $connection->prepare("INSERT INTO admin_user(login_admin, password_admin)
                                                  VALUES(?, ?)");
-    $ajout_admin_requete->bind_param("ss", $admin_login, $admin_password);
+    $ajout_admin_requete->bind_param("ss", $admin_login, $hash);
 
     if ($ajout_admin_requete->execute()) {
         $ajout_admin_execution_message = "<p>Admin ajouté avec succès !</p>";
@@ -80,8 +80,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <footer>
         <nav>
             <ul>
-                <li><a href="/">Connexion admin</a> / </li>
-                <li><a href="/">Déconnexion</a></li>
+                <li><a href="./user_connect.php">Connexion admin</a> / </li>
+                <li><a href="./user_disconnect.php">Déconnexion</a></li>
             </ul>
         </nav>
     </footer>
