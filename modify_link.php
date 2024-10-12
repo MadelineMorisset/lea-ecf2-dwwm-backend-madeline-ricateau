@@ -124,8 +124,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id_link"])) {
     <footer>
         <nav>
             <ul>
-                <li><a href="/">Connexion admin</a> / </li>
-                <li><a href="/">Déconnexion</a></li>
+                <li><a href="./user_connect.php">Connexion admin</a> / </li>
+                <li><a href="./user_disconnect.php">Déconnexion</a></li>
             </ul>
         </nav>
     </footer>
