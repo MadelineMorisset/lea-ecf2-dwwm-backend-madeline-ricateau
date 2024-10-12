@@ -2,11 +2,12 @@
 require_once('db_connect.php');
 
 $error="";
+$execution_request_message="";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $url=$_POST['url'] ?? '';
     $title=$_POST['title'] ?? '';
-    $comment=$_POST['comment'] ?? '';
+    $description=$_POST['description'] ?? '';
 
     if (empty($url)) {
         $error = "Veuillez insérer une URL.";
@@ -15,12 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $create_link_request = $db_connect->prepare("INSERT INTO link(url_link, titre_link, description_link, date_link)
                                                      VALUES(?,?,?, NOW())");
-        $execution_request=$create_link_request->execute([$url, $title, $comment]); 
+        $execution_request=$create_link_request->execute([$url, $title, $description]); 
     
         if ($execution_request) {
-            echo "Link ajouté avec succès !";
+            $execution_request_message = "<p>Link ajouté avec succès !</p>";
         } else {
-            echo "Erreur lors de l'ajout du link ...";
+            $execution_request_message = "<p>Erreur lors de l'ajout du link ...</p>";
         }
     }
 }
@@ -67,6 +68,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <button type="submit">PUBLIER</button>
             </form>
+
+
+            <?php if ($execution_request_message) { ?>
+            <div>
+                <p><?php echo $execution_request_message ?></p>
+            </div>
+            <?php }; ?>
         </div>
     </main>
 
