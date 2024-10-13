@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id_link"])) {
 
         <div>
             <h2>
-                <?php echo isset($affichage_titre_lien['titre_link']) ? ("Modifier le link :").htmlspecialchars($affichage_titre_lien['titre_link']) : ''; ?>
+                <?php echo isset($affichage_titre_lien['titre_link']) ? ("Modifier le link : ").htmlspecialchars($affichage_titre_lien['titre_link']) : ''; ?>
             </h2>
 
             <form method="POST">
