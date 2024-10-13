@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<!DOCTYPE html>v
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
