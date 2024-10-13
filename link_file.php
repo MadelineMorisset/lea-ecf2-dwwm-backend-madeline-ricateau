@@ -47,9 +47,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id_link"])) {
         <nav>
             <!-- Pseudo fil d'ariane -->
             <ul>
-                <li><a href="./backoffice.php">BACKOFFICE</a> / </li>
-                <li><a
-                        href="./modify_link.php"><?php echo isset($affichage_titre_lien['titre_link']) ? htmlspecialchars($affichage_titre_lien['titre_link']) : ''; ?></a>
+                <li><a href="./index.php">Home</a> / </li>
+                <li>
+                    <a href="./modify_link.php">
+                        <?php echo isset($affichage_titre_lien['titre_link']) ? htmlspecialchars($affichage_titre_lien['titre_link']) : ''; ?>
+                    </a>
                 </li>
             </ul>
         </nav>
