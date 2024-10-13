@@ -1,3 +1,5 @@
+<!-- Pas terminé; lorsqu'on valide ça affiche une page quasi blanche  -->
+
 <?php
 require_once('db_connect.php');
 
