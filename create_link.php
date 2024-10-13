@@ -63,8 +63,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="text" name="title" id="titre_link" required>
                 </div>
                 <div>
-                    <label for="comment">Commentaire :</label>
-                    <input type="text" name="comment" id="description_link">
+                    <label for="description">Description :</label>
+                    <input type="text" name="description" id="description_link">
                 </div>
                 <button type="submit">PUBLIER</button>
             </form>
