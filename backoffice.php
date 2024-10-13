@@ -48,7 +48,7 @@ $affichage_liens = $links_recuperes->fetchAll();
     <footer>
         <nav>
             <ul>
-                <li><a href="./user_connect.php">Connexion admin</a> / </li>
+                <li><a href="./user_connect.php">Admin</a> / </li>
                 <li><a href="./user_disconnect.php">Déconnexion</a></li>
             </ul>
         </nav>
