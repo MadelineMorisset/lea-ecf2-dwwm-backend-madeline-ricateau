@@ -90,8 +90,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id_link"])) {
         </nav>
 
         <div>
-            <h2>
-                <?php echo isset($affichage_titre_lien['titre_link']) ? ("Modifier le link : ").htmlspecialchars($affichage_titre_lien['titre_link']) : ''; ?>
+            <h2>Modifier le link : <br />
+                <?php echo $affichage_titre_lien['titre_link']; ?>
             </h2>
 
             <form method="POST">
@@ -106,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id_link"])) {
                     <input type="text" name="title" value="<?php echo $title; ?>" id="titre_link">
                 </div>
                 <div>
-                    <label for="description">description :</label>
+                    <label for="description">Description :</label>
                     <input type="text" name="description" value="<?php echo $description; ?>" id="description_link">
                 </div>
                 <button type="submit">Modifier</button>
