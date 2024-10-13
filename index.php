@@ -34,15 +34,17 @@ $affichage_liens = $links_recuperes->fetchAll();
         ?>
 
         <div>
-            <div>
-                <h2><?php echo $lien['titre_link'] ?></h2>
-                <p><?php echo $lien['description_link'] ?></p>
+            <a href="./link_file.php?id_link=<?php echo $lien['id_link'] ?>">
                 <div>
-                    <a href="<?php echo $lien['url_link'] ?>"><?php echo $lien['url_link'] ?></a>
-                    <p>Publié le : <?php echo date('d M Y', strtotime($lien['date_link'])) ?></p>
+                    <h2><?php echo $lien['titre_link'] ?></h2>
+                    <p><?php echo $lien['description_link'] ?></p>
+                    <div>
+                        <a href="<?php echo $lien['url_link'] ?>"><?php echo $lien['url_link'] ?></a>
+                        <p>Publié le : <?php echo date('d M Y', strtotime($lien['date_link'])) ?></p>
+                    </div>
                 </div>
-            </div>
-            <p>Il y a : <?php echo $affichage_nombre_commentaires['nombre_commentaires'] ?> commentaires</p>
+                <p>Il y a : <?php echo $affichage_nombre_commentaires['nombre_commentaires'] ?> commentaires</p>
+            </a>
         </div>
         <?php }; ?>
     </main>
