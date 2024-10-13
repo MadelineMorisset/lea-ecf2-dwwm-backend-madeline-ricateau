@@ -34,6 +34,10 @@ $affichage_liens = $links_recuperes->fetchAll();
         ?>
 
         <div>
+            <!-- Je voudrais que le bloc soit cliquable, et envoi vers la fiche du link en question,
+                 mais je ne sais pas comment, car là, seuls les balises en-dessus du lien imbriqué (ligne 46),
+                 sont pris en compte ... 
+            -->
             <a href="./link_file.php?id_link=<?php echo $lien['id_link'] ?>">
                 <div>
                     <h2><?php echo $lien['titre_link'] ?></h2>
@@ -42,8 +46,8 @@ $affichage_liens = $links_recuperes->fetchAll();
                         <a href="<?php echo $lien['url_link'] ?>"><?php echo $lien['url_link'] ?></a>
                         <p>Publié le : <?php echo date('d M Y', strtotime($lien['date_link'])) ?></p>
                     </div>
+                    <p>Il y a : <?php echo $affichage_nombre_commentaires['nombre_commentaires'] ?> commentaires</p>
                 </div>
-                <p>Il y a : <?php echo $affichage_nombre_commentaires['nombre_commentaires'] ?> commentaires</p>
             </a>
         </div>
         <?php }; ?>
